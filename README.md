@@ -1,28 +1,20 @@
-# GemTest
+# OgInit
 
-TODO: Write a gem description
+og_init is a basic rails application generator with some additional setups.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Install it yourself as:
 
-    gem 'gem_test'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install gem_test
+    $ gem install og_init
 
 ## Usage
 
-TODO: Write usage instructions here
+og_init [your_app_name]
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/gem_test/fork )
+1. Fork it ( https://github.com/sinorga/og_init/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
