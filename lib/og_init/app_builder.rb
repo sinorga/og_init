@@ -9,5 +9,12 @@ module OgInit
       #system('rvm --create use ruby-2.0.0@'+ app_name + ' --rvmrc')
       template "rc/.rvmrc.erb", '.rvmrc', :force => true
     end
+
+    def add_custom_gems
+      additions_path = find_in_source_paths 'Gemfile_additions'
+      new_gems = File.open(additions_path).read
+      inject_into_file 'Gemfile', "\n#{new_gems}",
+      :after => /gem 'jquery-rails'/
+    end
   end
 end

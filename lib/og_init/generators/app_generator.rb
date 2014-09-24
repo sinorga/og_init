@@ -11,6 +11,7 @@ module OgInit
     def og_init_customization
       invoke :add_common_rake_tasks
       invoke :add_rc_file
+      invoke :add_custom_gems
     end
 
     def add_common_rake_tasks
@@ -20,6 +21,11 @@ module OgInit
 
     def add_rc_file
       build :add_rvmrc
+    end
+
+    def add_custom_gems
+      say 'Add custom gems'
+      build :add_custom_gems
     end
 
     protected
