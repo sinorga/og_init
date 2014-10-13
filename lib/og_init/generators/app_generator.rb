@@ -12,6 +12,7 @@ module OgInit
       invoke :add_common_rake_tasks
       invoke :add_rc_file
       invoke :add_custom_gems
+      invoke :setup_rspec
     end
 
     def add_common_rake_tasks
@@ -26,8 +27,12 @@ module OgInit
     def add_custom_gems
       say 'Add custom gems'
       build :add_custom_gems
+      bundle_command 'install'
     end
 
+    def setup_rspec
+      bundle_command 'exec rails generate rspec:install'
+    end
     protected
 
     def get_builder_class
