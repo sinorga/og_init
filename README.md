@@ -10,7 +10,13 @@ Install it yourself as:
 
 ## Usage
 
-og_init [your_app_name]
+    $ og_init [your_app_name]
+
+## Features
+### RVM
+Using `your_app_name` for setup a gemset with ruby 2.1.2
+### Testing gems
+There are several gems for helping you write test code. The main gem is **RSpec**.
 
 ## Contributing
 
