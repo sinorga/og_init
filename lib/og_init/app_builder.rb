@@ -13,8 +13,7 @@ module OgInit
     def add_custom_gems
       additions_path = find_in_source_paths 'Gemfile_additions'
       new_gems = File.open(additions_path).read
-      inject_into_file 'Gemfile', "\n#{new_gems}",
-      :after => /gem 'jquery-rails'/
+      append_file 'Gemfile', "\n#{new_gems}"
     end
   end
 end
